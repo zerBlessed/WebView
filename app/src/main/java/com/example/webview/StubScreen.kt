@@ -1,10 +1,10 @@
-package com.reznikov.webview
+package com.example.webview
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import com.reznikov.webview.databinding.ActivityStudScreenBinding
+import com.example.webview.databinding.ActivityStudScreenBinding
 
 class StubScreen : AppCompatActivity() {
     private lateinit var binding: ActivityStudScreenBinding

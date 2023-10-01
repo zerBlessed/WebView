@@ -7,40 +7,40 @@
     <string name="snack">Snack</string>
     <string name="dinner">Dinner</string>
 
-    <string name="breakfast_meal">Oatmeal with \nberries, fruits, \nboiled egg</string>
-    <string name="lunch_meal">Buckwheat with \nboiled vegetables \nand chicken breast</string>
-    <string name="snack_meal">Low-fat cheese \nwith whole grain \nbread</string>
-    <string name="dinner_meal">Vegetable salad, \nmeat cutlet</string>
+    <string name="breakfast_meal">Oatmeal with\nberries, fruits,\nboiled egg</string>
+    <string name="lunch_meal">Buckwheat with\nboiled vegetables\nand chicken breast</string>
+    <string name="snack_meal">Low-fat cheese\nwith whole grain\nbread</string>
+    <string name="dinner_meal">Vegetable salad,\nmeat cutlet</string>
 
-    <string name="breakfast_meal2">Omelette with \nbaked vegetables</string>
-    <string name="lunch_meal2">Soup puree \nwith meatballs, \nvegetable salad \nwith rice</string>
+    <string name="breakfast_meal2">Omelette with\nbaked vegetables</string>
+    <string name="lunch_meal2">Soup puree\nwith meatballs,\nvegetable salad\n\nwith rice</string>
     <string name="snack_meal2">Nuts</string>
-    <string name="dinner_meal2">Steamed fish \ncutlet, \nvegetable salad</string>
+    <string name="dinner_meal2">Steamed fish\ncutlet,\nvegetable salad</string>
 
-    <string name="breakfast_meal3">Sugar-free \nmuesli with milk or \ncottage cheese</string>
-    <string name="lunch_meal3">Low-fat borscht, \npilaf with chicken</string>
-    <string name="snack_meal3">Salad of various \nfruits</string>
-    <string name="dinner_meal3">Turkey fillet \nbaked in the oven, \nvegetables</string>
+    <string name="breakfast_meal3">Sugar-free\nmuesli with milk or\ncottage cheese</string>
+    <string name="lunch_meal3">Low-fat borscht,\npilaf with chicken</string>
+    <string name="snack_meal3">Salad of various\nfruits</string>
+    <string name="dinner_meal3">Turkey fillet\nbaked in the oven,\nvegetables</string>
 
-    <string name="breakfast_meal4">Buckwheat \nporridge with milk</string>
-    <string name="lunch_meal4">Noodle soup, \nsteamed cutlet \nwith vegetables</string>
+    <string name="breakfast_meal4">Buckwheat\nporridge with milk</string>
+    <string name="lunch_meal4">Noodle soup,\nsteamed cutlet\nwith vegetables</string>
     <string name="snack_meal4">Nuts, berries</string>
-    <string name="dinner_meal4">Baked cauliflower, \nboiled chicken \nbreast</string>
+    <string name="dinner_meal4">Baked cauliflower,\nboiled chicken\nbreast</string>
 
     <string name="breakfast_meal5">Milk rice porridge</string>
-    <string name="lunch_meal5">Stewed cabbage \nwith vegetables, \nfish cutlet</string>
+    <string name="lunch_meal5">Stewed cabbage\nwith vegetables,\nfish cutlet</string>
     <string name="snack_meal5">Fruits (seasonal)</string>
-    <string name="dinner_meal5">Stewed beef with \nvegetables</string>
+    <string name="dinner_meal5">Stewed beef with\nvegetables</string>
 
-    <string name="breakfast_meal6">Steamed omelette \nwith tomatoes</string>
-    <string name="lunch_meal6">Fish soup, chicken \ncutlet</string>
+    <string name="breakfast_meal6">Steamed omelette\nwith tomatoes</string>
+    <string name="lunch_meal6">Fish soup, chicken\ncutlet</string>
     <string name="snack_meal6">Zucchini pancakes</string>
-    <string name="dinner_meal6">Baked salmon with \nasparagus</string>
+    <string name="dinner_meal6">Baked salmon with\nasparagus</string>
 
-    <string name="breakfast_meal7">Cottage cheese \npancakes with \nhoney and berries</string>
-    <string name="lunch_meal7">Pea soup with \nbeef, durum wheat \nmacaroni, fish \ncutlet</string>
-    <string name="snack_meal7">Cauliflower in \nbatter</string>
-    <string name="dinner_meal7">Turkey breast with \nboiled vegetables</string>
+    <string name="breakfast_meal7">Cottage cheese\npancakes with\nhoney and berries</string>
+    <string name="lunch_meal7">Pea soup with\nbeef, durum wheat\nmacaroni, fish\ncutlet</string>
+    <string name="snack_meal7">Cauliflower in\nbatter</string>
+    <string name="dinner_meal7">Turkey breast with\nboiled vegetables</string>
 
     <string name="schedule">Schedule</string>
 </resources>

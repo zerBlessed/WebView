@@ -1,14 +1,15 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.google.gms.google-services'
 }
 
 android {
-    namespace 'com.reznikov.webview'
+    namespace 'com.example.webview'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.reznikov.webview"
+        applicationId "com.example.webview"
         minSdk 21
         targetSdk 33
         versionCode 1
@@ -59,6 +60,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
+    implementation platform('com.google.firebase:firebase-bom:32.3.1')
     implementation 'com.google.firebase:firebase-config-ktx:20.0.2'
     implementation 'com.google.gms:google-services:4.3.10'
     implementation 'com.google.android.flexbox:flexbox:3.0.0'

@@ -1,8 +1,8 @@
-package com.reznikov.webview.utils
+package com.example.webview.utils
 
 import android.os.Build
 import java.util.*
-import com.reznikov.webview.BuildConfig
+import com.example.webview.BuildConfig
 
 class CheckIsEmu {
     fun checkIsEmu(): Boolean {

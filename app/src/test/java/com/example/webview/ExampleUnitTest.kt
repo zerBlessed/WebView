@@ -1,4 +1,4 @@
-package com.reznikov.webview
+package com.example.webview
 
 import org.junit.Test
 

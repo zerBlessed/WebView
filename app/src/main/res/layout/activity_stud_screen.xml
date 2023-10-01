@@ -114,7 +114,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="170dp"
                 android:background="@drawable/item_background"
-                android:minWidth="150dp"
+                android:minWidth="160dp"
                 android:padding="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
@@ -138,7 +138,7 @@
                     android:id="@+id/breakfast"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/breakfast_meal"
+                    android:text="@string/breakfast_meal7"
                     android:textColor="@color/black"
                     android:layout_marginTop="4dp"
                     android:textSize="14sp" />
@@ -151,7 +151,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
                 android:background="@drawable/item_background"
-                android:minWidth="150dp"
+                android:minWidth="160dp"
                 android:orientation="vertical"
                 android:padding="16dp">
 
@@ -174,7 +174,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="@string/lunch_meal"
+                    android:text="@string/lunch_meal7"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
 
@@ -184,7 +184,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="170dp"
                 android:background="@drawable/item_background"
-                android:minWidth="150dp"
+                android:minWidth="160dp"
                 android:padding="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
@@ -208,7 +208,7 @@
                     android:id="@+id/snack"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/snack_meal"
+                    android:text="@string/snack_meal7"
                     android:textColor="@color/black"
                     android:layout_marginTop="4dp"
                     android:textSize="14sp" />
@@ -219,7 +219,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="170dp"
                 android:background="@drawable/item_background"
-                android:minWidth="150dp"
+                android:minWidth="160dp"
                 android:padding="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
@@ -244,7 +244,7 @@
                     android:id="@+id/dinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/dinner_meal"
+                    android:text="@string/dinner_meal7"
                     android:textColor="@color/black"
                     android:layout_marginTop="4dp"
                     android:textSize="14sp" />

@@ -1,17 +1,19 @@
-package com.reznikov.webview
+package com.example.webview
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.webview.databinding.ActivityMainBinding
+import com.example.webview.utils.CheckIsEmu
+import com.example.webview.utils.Constants.Companion.KEY_URL
+import com.example.webview.utils.Constants.Companion.LINK_FIREBASE
+import com.example.webview.utils.InternetConnection
+import com.example.webview.utils.SharedPreferences
+import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigException
-import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings
-import com.reznikov.webview.databinding.ActivityMainBinding
-import com.reznikov.webview.utils.CheckIsEmu
-import com.reznikov.webview.utils.Constants.Companion.KEY_URL
-import com.reznikov.webview.utils.Constants.Companion.LINK_FIREBASE
-import com.reznikov.webview.utils.InternetConnection
-import com.reznikov.webview.utils.SharedPreferences
+import com.google.firebase.remoteconfig.ktx.remoteConfig
+import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -33,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             if (!InternetConnection(this).isAvailable()) {
                 showNoInternetConnection()
             } else {
-                openLinkInWebView()
+                openLinkInWebView(sharedPreferences.getValue(LINK_FIREBASE)!!)
             }
         } else {
             initFirebase()
@@ -42,16 +44,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initFirebase() {
-        remoteConfig = FirebaseRemoteConfig.getInstance()
-        val configSettings = FirebaseRemoteConfigSettings.Builder()
-            .setMinimumFetchIntervalInSeconds(0)
-            .build()
+        remoteConfig = Firebase.remoteConfig
+        val configSettings = remoteConfigSettings {
+            minimumFetchIntervalInSeconds = 3600
+        }
         remoteConfig.setConfigSettingsAsync(configSettings)
     }
 
     private fun connectFirebase() {
         try {
-            remoteConfig.fetchAndActivate().addOnCompleteListener { task ->
+            remoteConfig.fetchAndActivate().addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     val url = remoteConfig.getString(KEY_URL)
                     if (url.isEmpty() || CheckIsEmu().checkIsEmu()) {
@@ -60,7 +62,7 @@ class MainActivity : AppCompatActivity() {
                         val sharedPreferences = SharedPreferences(this)
                         sharedPreferences.save(LINK_FIREBASE, url)
 
-                        openLinkInWebView()
+                        openLinkInWebView(url)
                     }
                 } else {
                     showStubScreen()
@@ -83,8 +85,8 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun openLinkInWebView() {
-        val intent = Intent(this, WebView::class.java)
+    private fun openLinkInWebView(url: String) {
+        val intent = Intent(this, WV::class.java)
         startActivity(intent)
     }
 
