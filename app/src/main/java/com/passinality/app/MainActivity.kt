@@ -1,14 +1,14 @@
-package com.example.webview
+package com.passinality.app
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.webview.databinding.ActivityMainBinding
-import com.example.webview.utils.CheckIsEmu
-import com.example.webview.utils.Constants.Companion.KEY_URL
-import com.example.webview.utils.Constants.Companion.LINK_FIREBASE
-import com.example.webview.utils.InternetConnection
-import com.example.webview.utils.SharedPreferences
+import com.passinality.app.databinding.ActivityMainBinding
+import com.passinality.app.utils.CheckIsEmu
+import com.passinality.app.utils.Constants.Companion.KEY_URL
+import com.passinality.app.utils.Constants.Companion.LINK_FIREBASE
+import com.passinality.app.utils.InternetConnection
+import com.passinality.app.utils.SharedPreferences
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigException

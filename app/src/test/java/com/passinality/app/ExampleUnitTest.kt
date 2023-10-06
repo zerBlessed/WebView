@@ -1,4 +1,4 @@
-package com.example.webview
+package com.passinality.app
 
 import org.junit.Test
 

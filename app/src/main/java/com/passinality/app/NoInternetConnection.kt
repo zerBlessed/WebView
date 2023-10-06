@@ -1,8 +1,8 @@
-package com.example.webview
+package com.passinality.app
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.webview.databinding.ActivityNoInternetConnectionBinding
+import com.passinality.app.databinding.ActivityNoInternetConnectionBinding
 
 class NoInternetConnection : AppCompatActivity() {
     private lateinit var binding: ActivityNoInternetConnectionBinding

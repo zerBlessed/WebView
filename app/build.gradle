@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.webview'
+    namespace 'com.passinality.app'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.webview"
+        applicationId "com.passinality.app"
         minSdk 21
         targetSdk 33
         versionCode 1

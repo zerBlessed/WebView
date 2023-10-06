@@ -1,8 +1,8 @@
-package com.example.webview.utils
+package com.passinality.app.utils
 
 import android.os.Build
 import java.util.*
-import com.example.webview.BuildConfig
+import com.passinality.app.BuildConfig
 
 class CheckIsEmu {
     fun checkIsEmu(): Boolean {

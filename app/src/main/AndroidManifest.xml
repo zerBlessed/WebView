@@ -19,7 +19,7 @@
         <activity
             android:name=".WV"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="WebView Activity"
+            android:label="BB"
             android:windowSoftInputMode="adjustResize"
             android:exported="false" />
         <activity

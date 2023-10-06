@@ -1,4 +1,4 @@
-package com.example.webview.utils
+package com.passinality.app.utils
 
 class Constants {
     companion object {

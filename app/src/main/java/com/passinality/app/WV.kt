@@ -1,4 +1,4 @@
-package com.example.webview
+package com.passinality.app
 
 import android.content.Intent
 import android.net.Uri
@@ -11,9 +11,9 @@ import android.util.Log
 import android.webkit.*
 import android.widget.Toast
 import androidx.activity.ComponentActivity
-import com.example.webview.databinding.ActivityWebViewBinding
-import com.example.webview.utils.Constants.Companion.LINK_FIREBASE
-import com.example.webview.utils.SharedPreferences
+import com.passinality.app.databinding.ActivityWebViewBinding
+import com.passinality.app.utils.Constants.Companion.LINK_FIREBASE
+import com.passinality.app.utils.SharedPreferences
 import java.io.File
 import java.io.IOException
 import java.text.SimpleDateFormat

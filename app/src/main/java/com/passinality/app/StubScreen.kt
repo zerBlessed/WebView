@@ -1,10 +1,10 @@
-package com.example.webview
+package com.passinality.app
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import com.example.webview.databinding.ActivityStudScreenBinding
+import com.passinality.app.databinding.ActivityStudScreenBinding
 
 class StubScreen : AppCompatActivity() {
     private lateinit var binding: ActivityStudScreenBinding

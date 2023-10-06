@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Sports Nutrition</string>
+    <string name="app_name">BB</string>
     <string name="no_network">Network access is required for the application to work</string>
 
     <string name="breakfast">Breakfast</string>

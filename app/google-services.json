@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "90256315580",
-    "project_id": "test-task-af0c4",
-    "storage_bucket": "test-task-af0c4.appspot.com"
+    "project_number": "535466024229",
+    "project_id": "kfvjkd-57e04",
+    "storage_bucket": "kfvjkd-57e04.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:90256315580:android:fbcb245fa8d15c95022cb9",
+        "mobilesdk_app_id": "1:535466024229:android:c384c6b843fe97b9068ecc",
         "android_client_info": {
-          "package_name": "com.example.webview"
+          "package_name": "com.passinality.app"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAWV9GzFtmWXbc4__yl2CWCN1vFS0i9-Ss"
+          "current_key": "AIzaSyCu71eMcsY8BoVUhFt9HCAoMjyWOwTwEMs"
         }
       ],
       "services": {
