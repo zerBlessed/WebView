@@ -1,9 +1,13 @@
 package com.passinality.app
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
+import android.app.AlertDialog
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.passinality.app.databinding.ActivityStudScreenBinding
 
 class StubScreen : AppCompatActivity() {
@@ -20,6 +24,27 @@ class StubScreen : AppCompatActivity() {
     @SuppressLint("DiscouragedApi")
     private fun initDropDownList() {
         with(binding) {
+            val scheduleLinearLayout = listOf(
+                breakfastLinearLayout,
+                lunchLinearLayout,
+                snackLinearLayout,
+                dinnerLinearLayout,
+            )
+
+            val scheduleImage = listOf(
+                R.drawable.ic_apple,
+                R.drawable.ic_saucepan,
+                R.drawable.ic_orange,
+                R.drawable.ic_dish,
+            )
+
+            val scheduleString = listOf(
+                getString(R.string.breakfast),
+                getString(R.string.lunch),
+                getString(R.string.snack),
+                getString(R.string.dinner),
+            )
+
             val scheduleView = listOf(
                 breakfast,
                 lunch,
@@ -95,6 +120,32 @@ class StubScreen : AppCompatActivity() {
                 }
 
             }
+
+            scheduleLinearLayout.forEachIndexed { index, linearLayout ->
+                linearLayout.setOnClickListener {
+                    showCustomDialog(
+                        scheduleImage[index],
+                        scheduleString[index],
+                        (linearLayout.getChildAt(linearLayout.childCount - 1) as TextView).text.toString().replace("\n", " "),
+                    )
+                }
+            }
         }
+    }
+
+    private fun showCustomDialog(imageResId: Int, title: String, message: String) {
+        val dialogView: View = LayoutInflater.from(this).inflate(R.layout.custom_dialog, null)
+        val dialogBuilder = AlertDialog.Builder(this).setView(dialogView)
+        val dialog = dialogBuilder.create()
+
+        val imageView = dialogView.findViewById<ImageView>(R.id.imageView)
+        val titleTextView = dialogView.findViewById<TextView>(R.id.titleTextView)
+        val messageTextView = dialogView.findViewById<TextView>(R.id.textView)
+
+        imageView.setImageResource(imageResId)
+        titleTextView.text = title
+        messageTextView.text = message
+
+        dialog.show()
     }
 }

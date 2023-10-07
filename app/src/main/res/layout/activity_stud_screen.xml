@@ -111,6 +111,7 @@
             app:alignItems="center">
 
             <LinearLayout
+                android:id="@+id/breakfastLinearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="170dp"
                 android:background="@drawable/item_background"
@@ -129,7 +130,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/breakfast"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_color"
                     android:layout_marginTop="8dp"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -139,13 +140,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/breakfast_meal7"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_color"
                     android:layout_marginTop="4dp"
                     android:textSize="14sp" />
 
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/lunchLinearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="170dp"
                 android:layout_marginEnd="16dp"
@@ -165,7 +167,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/lunch"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_color"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -175,12 +177,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="@string/lunch_meal7"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_color"
                     android:textSize="14sp" />
 
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/snackLinearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="170dp"
                 android:background="@drawable/item_background"
@@ -199,7 +202,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/snack"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_color"
                     android:layout_marginTop="8dp"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -209,13 +212,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/snack_meal7"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_color"
                     android:layout_marginTop="4dp"
                     android:textSize="14sp" />
 
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/dinnerLinearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="170dp"
                 android:background="@drawable/item_background"
@@ -226,7 +230,6 @@
                 android:orientation="vertical">
 
                 <ImageView
-                    android:id="@+id/imageView"
                     android:layout_width="32dp"
                     android:layout_height="32dp"
                     android:src="@drawable/ic_dish" />
@@ -235,7 +238,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/dinner"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_color"
                     android:layout_marginTop="8dp"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -245,7 +248,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/dinner_meal7"
-                    android:textColor="@color/black"
+                    android:textColor="@color/text_color"
                     android:layout_marginTop="4dp"
                     android:textSize="14sp" />
 

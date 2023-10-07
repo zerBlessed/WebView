@@ -3,17 +3,15 @@ package com.passinality.app
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.remoteconfig.FirebaseRemoteConfig
+import com.google.firebase.remoteconfig.ktx.remoteConfig
+import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
 import com.passinality.app.databinding.ActivityMainBinding
 import com.passinality.app.utils.CheckIsEmu
 import com.passinality.app.utils.Constants.Companion.KEY_URL
 import com.passinality.app.utils.Constants.Companion.LINK_FIREBASE
-import com.passinality.app.utils.InternetConnection
 import com.passinality.app.utils.SharedPreferences
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.remoteconfig.FirebaseRemoteConfig
-import com.google.firebase.remoteconfig.FirebaseRemoteConfigException
-import com.google.firebase.remoteconfig.ktx.remoteConfig
-import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -32,11 +30,7 @@ class MainActivity : AppCompatActivity() {
         val sharedPreferences = SharedPreferences(this)
 
         if (sharedPreferences.contains(LINK_FIREBASE)) {
-            if (!InternetConnection(this).isAvailable()) {
-                showNoInternetConnection()
-            } else {
-                openLinkInWebView(sharedPreferences.getValue(LINK_FIREBASE)!!)
-            }
+            openLinkInWebView()
         } else {
             initFirebase()
             connectFirebase()
@@ -53,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun connectFirebase() {
         try {
-            remoteConfig.fetchAndActivate().addOnCompleteListener(this) { task ->
+            remoteConfig.fetchAndActivate().addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     val url = remoteConfig.getString(KEY_URL)
                     if (url.isEmpty() || CheckIsEmu().checkIsEmu()) {
@@ -62,22 +56,15 @@ class MainActivity : AppCompatActivity() {
                         val sharedPreferences = SharedPreferences(this)
                         sharedPreferences.save(LINK_FIREBASE, url)
 
-                        openLinkInWebView(url)
+                        openLinkInWebView()
                     }
                 } else {
                     showStubScreen()
                 }
-            }.addOnFailureListener {
-                showNoInternetConnection()
             }
-        } catch (e: FirebaseRemoteConfigException) {
-            showNoInternetConnection()
+        } catch (e: Exception) {
+            showStubScreen()
         }
-    }
-
-    private fun showNoInternetConnection() {
-        val intent = Intent(this, NoInternetConnection::class.java)
-        startActivity(intent)
     }
 
     private fun showStubScreen() {
@@ -85,7 +72,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    private fun openLinkInWebView(url: String) {
+    private fun openLinkInWebView() {
         val intent = Intent(this, WV::class.java)
         startActivity(intent)
     }

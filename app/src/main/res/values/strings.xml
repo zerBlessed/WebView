@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">BB</string>
-    <string name="no_network">Network access is required for the application to work</string>
 
     <string name="breakfast">Breakfast</string>
     <string name="lunch">Lunch</string>
@@ -13,7 +12,7 @@
     <string name="dinner_meal">Vegetable salad,\nmeat cutlet</string>
 
     <string name="breakfast_meal2">Omelette with\nbaked vegetables</string>
-    <string name="lunch_meal2">Soup puree\nwith meatballs,\nvegetable salad\n\nwith rice</string>
+    <string name="lunch_meal2">Soup puree\nwith meatballs,\nvegetable salad\nwith rice</string>
     <string name="snack_meal2">Nuts</string>
     <string name="dinner_meal2">Steamed fish\ncutlet,\nvegetable salad</string>
 
